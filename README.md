@@ -24,7 +24,7 @@ PS中的PS：一般情况下应急,是攻击者上传了webshell到服务端,而
 * AspXorBase64
 * AspBase64
 * CsharpAsmxAesBase64
-* CsharpEvalAesBase64 等
+* CsharpEvalAesBase64 
 
 JavaAesRaw 通过wireshark抓取到16进制流量解密如下：
 
