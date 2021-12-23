@@ -12,14 +12,19 @@
 
 PS： 请求包的数据在发送的时候是以键值对形式发送的, 所以在请求包解密时个人加上了 "=", 构成 key = value 的形式, 实际上哥斯拉流量发送时是没有 "=" 号的
 
-PS中的PS：一般情况下应急,是攻击者上传了webshell到服务端,而上传上去的哥斯拉木马的key其实是通过md5处理过后的,而不是直接获取到原生的key,所以这次更新还不够全面,下次会加上根据不同情况选择加密后key还是原生key来进行流量解密。
+PS中的PS：一般情况下应急,是攻击者上传了webshell到服务端,而上传上去的哥斯拉木马的key其实是通过md5处理过后的,而不是直接获取到原生的key,所以这次更新根据不同情况选择加密后key还是原生key来进行流量解密。
 
 ## 目前支持哥斯拉载荷的解密如下：
 * CsharpAesBase64
 * PhpEvalXorBase64（该载荷解密数据为key中的内容，而不是pass的，key中内容才是传输的加密内容）
 * PhpXorBase64
 * JavaAesBase64
-* JavaAesRaw（该解密目前只支持请求包解密，且流量需要16进制数据，可通过wireshark抓取）等
+* JavaAesRaw（该解密目前只支持请求包解密，且流量需要16进制数据，可通过wireshark抓取）
+* AspEvalBase64
+* AspXorBase64
+* AspBase64
+* CsharpAsmxAesBase64
+* CsharpEvalAesBase64 等
 
 JavaAesRaw 通过wireshark抓取到16进制流量解密如下：
 
